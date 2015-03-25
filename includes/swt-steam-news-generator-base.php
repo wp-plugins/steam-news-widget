@@ -40,6 +40,8 @@ abstract class steam_news_generator_base{
 			self::TEMPLATE_PARAM_NEWS_LIST => array()
 		);
 
+		$news_list = array_slice($news_list, 0, (int)$news_count);
+
 		foreach($news_list as $news){
 
 			$news_title = $news->get_title();

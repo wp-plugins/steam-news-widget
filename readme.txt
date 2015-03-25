@@ -3,20 +3,21 @@ Contributors: softsultant
 Tags: steam, steampowered, games, news, game news, widget, plugin.
 Requires at least: 3.0.0
 Tested up to: 4.1.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
-Shows news for a selected game. The widget regularly fetches data from http://steampowered.com.
+Shows news for selected games. The widget regularly fetches data from http://steampowered.com.
 
 == Description ==
 
-The plugin adds a widget that shows news for a selected game.
+The plugin adds a widget that shows news for selected games.
 
 = Configuration Options =
 
-* Steam Game ID:
-	The game is referenced by a steam app id.
+* Steam Game IDs:
+	Games are referenced by their steam app id.
+	Just enter a comma-separated list of app ids, like "440, 570, 730" (without quotes).
 	You can find the full list of steam app ids at http://api.steampowered.com/ISteamApps/GetAppList/v0002/ .
 
 * Maximum Number of News:
@@ -75,6 +76,10 @@ Nothing here yet.
 = 1.0.0 =
 
 * Initial release.
+
+= 1.1.0 =
+
+* Multiple app id support.
 
 == Upgrade Notice ==
 

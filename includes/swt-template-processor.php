@@ -13,10 +13,6 @@ class template_processor{
 
 	private $params = array();
 
-	protected function class_exists($class_name){
-		return \class_exists($class_name, FALSE);
-	}
-
 	public static function handle_xml_error($errno, $errstr, $errfile, $errline){
 		
 		if ($errno == E_WARNING
@@ -28,7 +24,7 @@ class template_processor{
 
 	public function run($template, $params){
 
-		if (!$this->class_exists('\DOMDocument')){
+		if (!class_exists('\DOMDocument')){
 			throw new \Exception('DOMDocument class is missing. Make sure all necessary XML libraries are installed.');
 		}
 

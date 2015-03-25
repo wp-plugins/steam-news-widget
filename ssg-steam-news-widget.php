@@ -2,8 +2,8 @@
 /*
 Plugin Name: Steam News Widget
 Plugin URI: http://www.pcgametricks.com/
-Description: Shows news for a selected game.
-Version: 1.0.0
+Description: Shows news for selected games.
+Version: 1.1.0
 Author: Softsultant
 */
 

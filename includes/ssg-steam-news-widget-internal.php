@@ -19,7 +19,7 @@ class ssg_steam_news_widget extends WP_Widget{
 	const DEFAULT_TITLE = 'Game News';
 
 	const OPTION_STEAM_GAME_ID = 'steam-game-id';
-	const DEFAULT_STEAM_GAME_ID = 730;
+	const DEFAULT_STEAM_GAME_ID = '440, 570, 730';
 
 	const OPTION_MAX_NEWS_COUNT = 'max-news-count';
 	const DEFAULT_MAX_NEWS_COUNT = 5;
@@ -135,7 +135,7 @@ class ssg_steam_news_widget extends WP_Widget{
 		$options_view->add_control(self::OPTION_TITLE,
 			new \ssg_steam_news_core\wp_gui_control_editbox('Title:'));
 		$options_view->add_control(self::OPTION_STEAM_GAME_ID,
-			new \ssg_steam_news_core\wp_gui_control_editbox('Steam Game ID:'));
+			new \ssg_steam_news_core\wp_gui_control_editbox('Steam Game IDs(","-separated list):'));
 		$options_view->add_control(self::OPTION_MAX_NEWS_COUNT,
 			new \ssg_steam_news_core\wp_gui_control_editbox('Maximum Number of News:'));
 		$options_view->add_control(self::OPTION_NEWS_LENGTH,
