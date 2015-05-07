@@ -2,6 +2,8 @@
 
 defined('ABSPATH') or die('No script kiddies please!');
 
+require_once(__DIR__.'/swt-wp-cron.php');
+
 class ssg_steam_news_widget extends WP_Widget{
 
 	const CRON_HOOK_NAME = 'ssg-steam-news-cron-hook';
@@ -216,13 +218,7 @@ class ssg_steam_news_widget extends WP_Widget{
 		$this->save_settings($new_instances);
 	}
 
-	public function activate(){
-		require_once(__DIR__.'/swt-wp-cron.php');
-		\ssg_steam_news_core\cron_register_callback(self::CRON_HOOK_NAME);
-	}
-
 	public function deactivate(){
-		require_once(__DIR__.'/swt-wp-cron.php');
 		\ssg_steam_news_core\cron_clear_callbacks(self::CRON_HOOK_NAME);
 	}
 
@@ -242,6 +238,8 @@ class ssg_steam_news_widget extends WP_Widget{
 
 add_action('widgets_init',
 	create_function('', 'return register_widget("ssg_steam_news_widget");'));
+
+\ssg_steam_news_core\cron_register_callback(ssg_steam_news_widget::CRON_HOOK_NAME);
 
 add_action(ssg_steam_news_widget::CRON_HOOK_NAME,
 	array(new ssg_steam_news_widget, 'fetch_data_ex'));

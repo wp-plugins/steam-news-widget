@@ -2,8 +2,8 @@
 Contributors: softsultant
 Tags: steam, steampowered, games, news, game news, widget, plugin.
 Requires at least: 3.0.0
-Tested up to: 4.1.1
-Stable tag: 1.1.0
+Tested up to: 4.2.1
+Stable tag: 1.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -80,6 +80,11 @@ Nothing here yet.
 = 1.1.0 =
 
 * Multiple app id support.
+
+= 1.1.1 =
+
+* Fixed a non-critical issue. The bug prevented news steam updates in rare cases.
+
 
 == Upgrade Notice ==
 

@@ -13,7 +13,6 @@ class wp_cron_manager{
 	}
 
 	public function clear_callbacks(){
-
 		wp_clear_scheduled_hook($this->hook_name);
 	}
 
